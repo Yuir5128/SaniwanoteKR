@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title>스크린샷</title>
+<script TYPE="text/javascript" src="dark.js"></script>
+<link rel="stylesheet" href="torabutool.css">
+<style type="text/css">
+:root{
+  --canvas-m-ma:#709772;
+  --canvas-m-se:#906fa9;
+  --canvas-m-bt:#c1758a;
+}
+/*이미지 편집 영역*/
+#editwaku button{margin:5px;width:130px;padding:2px 1px}
+#editimg{margin:5px 0px;padding:0px;width:1030px;height:600px;float:left;}
+#editmenu{margin-left:5px;padding:0px;width:150px;height:600px;float:left;font-size:0.95em;}
+div.editbutton{margin-bottom:26px;padding:1px;}
+#editfoot{clear:both}
+#savelink{font-size:11pt;font-weight:bold}
+input{width:22px;font-size:8pt}
+input.radio{margin:3px 1px 1px 5px;width:14px}
+a{font-size:120%;}
+#newing{padding:0px}
+#trimline{border:1px dotted #ff0000;width:1px;height:1px;z-index:10;position:absolute;top:0px;left:0px;display:none}
+
+/*마스크 전환*/
+#maskcng input{margin:0px;padding:0px;vertical-align:-0.3em;}
+#maskcng label{display:inline-block;margin:2px 1px 0px 0px;padding:2px;
+  border-top-left-radius:5px;border-top-right-radius:5px;
+  color:#ffffff;font-weight:bold;}
+#maskcng label:hover{color:#ffefc5}
+#mask_ma,#maskbtn{background-color:var(--canvas-m-ma)}
+#mask_se{background-color:var(--canvas-m-se)}
+#mask_bt{background-color:var(--canvas-m-bt)}
+</style>
+</head>
+<body>
+<div id="editwaku">
+<div id="edithead">※촬영은 페이지를 스크롤하지 않은 상태에서 실행해주세요. 화면상에서 보이지 않는 부분이 있을 경우, 표시 배율을 바꾸고 있는 경우는 여백이 표시되거나 촬영되지 않는 부분이 있을 수 있습니다.</div>
+<div id="editimg"><div id="newimg"></div></div>
+<div id="editmenu">
+<div class="edittitle">편집</div>
+<div class="editbutton" id="maskcng">
+<label id="mask_ma"><input type="radio" value="ma" name="mask" class="radio" checked>本마루</label>
+<label id="mask_se"><input type="radio" value="se" name="mask" class="radio">戦績</label>
+<label id="mask_bt"><input type="radio" value="bt" name="mask" class="radio">戦闘</label>
+<div id="maskbtn"><button id="namemask">사니와 이름 마스크</button><br>
+<button id="lvmask">사니와Lv 마스크</button>
+</div>
+<br>
+<button id="copycut">카피라이트 부분 컷</button><br>
+<button id="wakucut">메뉴 부분 컷</button>
+전적 등의 테두리 밖 부분을 컷<br>
+</div>
+<div class="edittitle">사이즈・타이틀 타입</div>
+<div class="editbutton">
+<button id="syukusyo">80％ 축소 </button><br>반복 사용 가능<br>
+<br>
+<button id="tojpg">jpg변환</button><br>타이틀 사이즈를 줄일 수 있지만 이미지가 열화됩니다. 보존 직전에
+</div>
+<div class="edittitle"><button id="resetimg">편집을 리셋</button><br>캡쳐 직후에 복귀</div>
+<br>
+<div class="edittitle"><label><input type="checkbox" id="siteicut">지정 범위에서 컷</label></div>
+<div id="ninicut" style="display:none">
+x<input type="text" id="sitenx" pattern="^[0-9]+$"> y<input type="text" id="siteny" pattern="^[0-9]+$">
+w<input type="text" id="haba" pattern="^[0-9]+$"> h<input type="text" id="takasa" pattern="^[0-9]+$">
+</div><span id="capmes">체크 박스 ON으로 범위 지정 개시<br>※테스트 공개중. 실패 시에는『편집을 리셋』해주세요.</span>
+
+</div>
+<div id="editfoot"><span id="savelink"></span>　※저장 위치나 이름을 바꾸려면 우클릭→「이름을 붙여서 링크를 저장」</div>
+</div>
+
+<canvas id="sukusyo" style="display:none"></canvas>
+<div id="trimline"><button id="cutEnt" style="display:none">빨간 테두리 범위로 컷</button></div>
+<script type="text/javascript" src="canvas.js"></script>
+</body>
+</html>

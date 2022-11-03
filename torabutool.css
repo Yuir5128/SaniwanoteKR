@@ -1,0 +1,484 @@
+:root{
+  color-scheme:light;
+  --font-name:'MS PGothic','Hiragino Kaku Gothic Pro W3',sans-serif,'Meiryo UI';
+  --main-bg:#fcfcfc;
+  --main-col:#111111;
+  --border-col:#758AA6;
+  --whead-bg:#f2fbfc;
+  --con-head-back:#a1bfe2 80%;
+  --con-head-text:#383838;
+  
+  --ta-soubion:#077549;
+  --ta-souuma:#005C99;
+  --ta-nowen:#5C0099;
+  --ta-kou:#FCF2FF;
+  --ta-syo:#C1F1FF;
+  --ta-sakura:#ffe9ea;
+  --ta-hirou:#ffc155;
+  --ta-akahiro:#ff7676;
+  --ta-tai1:#E9F2DB;
+  --ta-tai2:#F1E4DB;
+  --ta-tai3:#DFDFF1;
+  --ta-tai4:#F1EED4;
+  --ta-nokey:#eaeaea;
+  --ta-syugyo:#fff9c4;
+  --ta-hpzan:#B22222;
+  --ta-jyusyo:#FBAAAA;
+  --ta-cyusyo:#FFDEAD;
+  --ta-keisyo:#FFFFE0;
+  --ta-teire:#badefe;
+
+  --touso-nm:#c9efd8;
+  --touso-jo:#e2e2e2;
+  --touso-tk:#efeeaa;
+  --touso-uma:#efe3bf;
+  --touso-mam:#deabab;
+  --touso-sui:#9ac2e5;
+  --soz-mo:#F2F2F2;--soz-mo-bd:#d6d6d6;
+  --soz-gy:#FFFCF2;--soz-gy-bd:#f5ebca;
+  --soz-ri:#F9F4EC;--soz-ri-bd:#f7e9d2;
+  --soz-to:#EFF8FD;--soz-to-bd:#dff3ff;
+  --nin-mo:#f3f8f2;
+
+  --ico-tan:#B88499;--ico-tan-bg:#fff0f7;
+  --ico-wa:#C7982A;--ico-wa-bg:#ffefd2;
+  --ico-uti:#769C42;--ico-uti-bg:#f0fbe3;
+  --ico-ta:#6DA3BD;--ico-ta-bg:#e0f8fd;
+  --ico-oot:#274a78;--ico-oot-bg:#d7f2f7;
+  --ico-ya:#9171A0;--ico-ya-bg:#f0e3fc;
+  --ico-nag:#8A6060;--ico-nag-bg:#ffe0e0;
+  --ico-tur:#888888;--ico-tur-bg:#d5e1f4;
+  --dr-area:#f5f5f6;
+  --dr-tan:#e4f1e6;
+  --dr-nobo:#d5c7ec;--dr-nobo-br:#775398;
+  --dr-boss:#ecc8d5;--dr-boss-br:#922a4e;
+  --dr-nomal:#c0e2ff;--dr-nomal-br:#05467f;
+
+  --btn-hover:#ffdddd;
+  --head-bg:#e1e5ea;
+  --head-text:#484848;
+  --head-link:#3c6083;
+
+  --canvas-waku:#c9c6c6;
+  --canvas-br:#b4b4b4;
+  --canvas-bg:#fdfdfd;
+
+  --hozon-sbtn:#d3deee;
+  --hozon-cbtn:#deeed3;
+}
+:root[theme-mode='dark']{
+  color-scheme:dark;
+  --main-bg:#1c1c1a;
+  --main-col:#f3f3f3;
+  --border-col:#5c6d85;
+  --whead-bg:#233035;
+  --con-head-text:#c3c3c3;
+
+  --ta-soubion:#42b584;
+  --ta-souuma:#80b8d8;
+  --ta-nowen:#9a52cb;
+  --ta-kou:#5e365b;
+  --ta-syo:#24425a;
+  --ta-sakura:#69515a;
+  --ta-hirou:#ffc15580;
+  --ta-akahiro:#ff767680;
+  --ta-tai1:#4b543d;
+  --ta-tai2:#685c54;
+  --ta-tai3:#575770;
+  --ta-tai4:#46442c;
+  --ta-nokey:#3c3c3c;
+  --ta-syugyo:#585217;
+  --ta-hpzan:#ff9c97;
+  --ta-jyusyo:#933333;
+  --ta-cyusyo:#785015;
+  --ta-keisyo:#60603a;
+  --ta-teire:#2f5a8d;
+
+  --touso-nm:#205235;
+  --touso-jo:#494949;
+  --touso-tk:#3c3d0d;
+  --touso-uma:#544719;
+  --touso-mam:#b94a4a;
+  --touso-sui:#308ce7;
+  --soz-mo:#404040;--soz-mo-bd:#d6d6d675;
+  --soz-gy:#383429;--soz-gy-bd:#f5ebca75;
+  --soz-ri:#2e261f;--soz-ri-bd:#f7e9d275;
+  --soz-to:#283538;--soz-to-bd:#dff3ff75;
+  --nin-mo:#202b1e;
+
+  --ico-tan-bg:#fff0f726;
+  --ico-wa-bg:#ffefd226;
+  --ico-uti-bg:#f0fbe326;
+  --ico-ta-bg:#e0f8fd26;
+  --ico-oot:#2357c9;--ico-oot-bg:#12203c;
+  --ico-ya-bg:#f0e3fc22;
+  --ico-nag-bg:#ffe0e022;
+  --ico-tur-bg:#d5e1f426;
+  --dr-area:#282828;
+  --dr-tan:#485249;
+  --dr-nobo:#775398;--dr-nobo-br:#d5c7ec;
+  --dr-boss:#8f3f5b;--dr-boss-br:#ecc8d5;
+  --dr-nomal:#366b97;--dr-nomal-br:#c0e2ff;
+
+  --btn-hover:#865763;
+  --head-bg:#888a8d;
+  --head-text:#000000;
+  --head-link:#051d34;
+
+  --canvas-waku:#585858;
+  --canvas-br:#929292;
+  --canvas-bg:#202020;
+
+  --hozon-sbtn:#98adcb;
+  --hozon-cbtn:#b4cba4;
+}
+
+*{margin:0px;padding:0px;}
+body{
+  font-family:'MS PGothic','Hiragino Kaku Gothic Pro W3',sans-serif,'Meiryo UI';
+  font-feature-settings:"pwid";
+  background-color:var(--main-bg);color:var(--main-col);
+  line-height:130%;font-size:9pt;
+}
+
+/*ヘッダ*/
+#header{margin:0px;top:0px;width:100%;height:18px;position:fixed;display:flex;background-color:var(--head-bg);color:var(--head-text)}
+div#date{color:var(--head-text);font-size:100%;width:320px;padding:1px;flex-basis:auto;flex-grow:1;}
+#menubar{flex-basis:370px;}
+#menubar a{text-decoration:none;padding:1px;margin:0px;color:var(--head-link);width:70px;display:inline-block;text-align:center;
+  border-width:0px 0px 0px 1px;border-color:#b0bec5;border-style:solid }
+#menubar a:hover{background-color:#d6b5b8}
+
+div#container{min-width:700px;margin:25px 2px;}
+div#flontpanel{margin:3px 1px;min-width:720px;clear:both;}
+
+.con_head{padding:12px 10px 1px 10px;margin:5px 0px;
+    font-size:100%;font-weight:bold;font-family: sans-serif;letter-spacing:0.2em;color:var(--con-head-text);
+    border-radius:2px;background:linear-gradient(transparent 80%,var(--con-head-back))}
+ 
+.dhead{border:1px solid var(--border-col);padding:1px 3px;background-color:var(--whead-bg);
+    font-weight:bold;letter-spacing:1px;margin:0px;margin-top:5px;width:690px;font-size:110%}
+.waku{border:1px solid var(--border-col);line-height:150%;width:690px;padding:2px;margin:1px;}
+
+.wakuhead{border-width:1px 1px 0px 1px;border-style:solid;border-color:var(--border-col);
+  padding:1px 3px;margin:5px 1px 0px 1px;
+  background-color:var(--whead-bg);font-weight:bold;letter-spacing:1px;font-size:110%}
+.wakubody{border-width:1px;border-style:solid;border-color:var(--border-col);
+  line-height:150%;margin:0px 1px 2px 1px;padding:1px 3px;}
+
+#teireuchi{margin:0px;padding:0px}
+#parasetu{padding:2px;color:var(--ta-soubion)}
+
+/*목록상*/
+#kentb_box{display:inline-block;margin:1px;padding:0px;}
+#kentb_head{width:100%;display:flex;margin:3px 0px;padding:0px;}
+#kentb_para{flex-basis:320px;flex-grow:1;margin:0px;padding:0px;}
+#hyo_set_btn{position:relative;flex-basis:110px;overflow:visible}
+#hyo_set{
+  position:absolute;z-index:5;background-color:var(--main-bg);width:220px;margin-left:-110px;margin-top:-160px;height:150px;
+  border:1px solid #00A3CC;padding:3px;font-size:9pt;box-shadow:2px 2px 2px rgba(0,0,0,0.4);border-radius:5px;
+  visibility: hidden;transition-property:visibility;transition-delay:0.3s;
+}
+#hyo_set p{margin:6px 0px;}
+#hyo_set p:first-child{color:var(--ta-souuma)}
+#hyo_set label:hover{color:#c74a89}
+#hyo_set_btn:hover #hyo_set{visibility:visible;}
+#sibori{width:100%;box-sizing:border-box;margin:0px;padding:1px 0px 5px 4px;border-width:1px 1px 0px 1px;border-style:solid;
+  border-color:var(--border-col);background-color:var(--whead-bg);letter-spacing:1px;}
+#hozonmenu{border:1px solid #00A3CC;line-height:150%;width:600px;padding:2px;margin:5px 1px;border-radius:3px;}
+.souuma{color:var(--ta-souuma) !important;}
+.nosoubi{color:var(--main-col) !important;}
+.koucol{background-color:var(--ta-kou);}
+.syocol{background-color:var(--ta-syo);}
+.flo{float:left;margin:3px}
+/*부대합계*/
+#bukeihead{color:var(--ta-soubion)}
+#lvhei{font-weight:normal;font-size:90%;}
+.pkei{width:502px;float:left}
+.pkeir{width:183px;float:left}
+.nowen{color:var(--ta-nowen)}
+.cl{clear:both;height:0px;width:0px;margin:0px;padding:0px}
+
+/* 도검種*/
+.tanico,.tanKico, .waico,.waKico, .utiico,.rutiico,.utiKico,.rutiKico, .taico,.taKico, .ootico,.ootKico, .yaico,.yaKico, .nagico,.nagKico,
+.turico,.turKico{color:#9ea2a7; border-color:#9ea2a7;
+border-style:solid;border-width:1px;border-radius:3px;
+font-size:9px;padding-left:1px;padding-top:1px;padding-bottom:1px;padding-right:0px;margin:2px;}
+.tanico{color:var(--ico-tan); border-color:var(--ico-tan)}
+.tanKico{color:var(--ico-tan); border-color:var(--ico-tan);background-color:var(--ico-tan-bg)}
+.waico{color:var(--ico-wa); border-color:var(--ico-wa)}
+.waKico{color:var(--ico-wa); border-color:var(--ico-wa);background-color:var(--ico-wa-bg)}
+.utiico,.rutiico{color:var(--ico-uti); border-color:var(--ico-uti)}
+.utiKico,.rutiKico{color:var(--ico-uti); border-color:var(--ico-uti);background-color:var(--ico-uti-bg)}
+.taico{color:var(--ico-ta); border-color:var(--ico-ta)}
+.taKico{color:var(--ico-ta); border-color:var(--ico-ta);background-color:var(--ico-ta-bg)}
+.ootico{color:var(--ico-oot); border-color:var(--ico-oot)}
+.ootKico{color:var(--ico-oot); border-color:var(--ico-oot);background-color:var(--ico-oot-bg)}
+.yaico{color:var(--ico-ya); border-color:var(--ico-ya)}
+.yaKico{color:var(--ico-ya); border-color:var(--ico-ya);background-color:var(--ico-ya-bg)}
+.nagico{color:var(--ico-nag); border-color:var(--ico-nag)}
+.nagKico{color:var(--ico-nag); border-color:var(--ico-nag);background-color:var(--ico-nag-bg)}
+.turico{color:var(--ico-tur); border-color:var(--ico-tur)}
+.turKico{color:var(--ico-tur); border-color:var(--ico-tur);background-color:var(--ico--bg)}
+
+/*パーツ*/
+.hide{display:none;}
+.hidden{visibility:hidden;}
+.cyui{color:#b40000}
+/*.setu{color:#292929;}*/
+input,button{font-size:9pt;margin:2px;}
+input[type="button"],button{
+  font-family:var(--font-name);
+  font-feature-settings:"pwid";padding:3px 4px;
+  border:1px solid #8e8e8e;border-radius:3px;
+  transition: 0.2s;
+}
+button:hover{background-color:var(--btn-hover);}
+input[type="checkbox"]{margin:0px 2px;padding:0px;vertical-align:-0.2em;}
+
+/*tip*/
+.help{position:relative;cursor:pointer;padding-left:5px;font-size:0.8em;color:#4682b4;}
+.tooltip{
+  position:absolute;visibility:hidden;opacity:0;z-index:1;
+  width:180px;left:50%;bottom:100%;transform: translateX(-50%);
+  margin-bottom:2px;padding:7px;border-radius:10px;
+  background-color:#3d5a89;box-shadow:2px 2px 2px rgba(0,0,0,0.4);
+  font-size:0.7em;color:#ffffff;
+  transition:0.2s all;
+}
+.tooltip:after{
+  content: "";
+  position:absolute;top:100%;left:50%;margin-left:-5px;
+  border:5px solid transparent;border-top:5px solid #3d5a89;
+}
+.help:hover .tooltip{bottom:100%;visibility:visible; opacity:1;}
+#hirotip{
+  position:absolute;z-index:1;display:none;
+  width:180px;padding:7px;border-radius:10px;
+  background-color:#3d5a89;box-shadow:2px 2px 2px rgba(0,0,0,0.4);
+  font-size:1em;color:#ffffff;
+}
+span.rtime{cursor:pointer}
+
+/* 도검목록*/
+table{font-size:13px;line-height:120%;margin:1px;}
+table#kentb{min-width:690px;clear:both;margin:0px;}
+table.ta{border-collapse:collapse;}
+table.ta, table.ta td, table.ta th{border:1px solid var(--border-col)}
+th,td{padding:3px}
+th{background-color:var(--whead-bg)}
+td.tai1{background-color:var(--ta-tai1)}
+td.tai2{background-color:var(--ta-tai2)}
+td.tai3{background-color:var(--ta-tai3)}
+td.tai4{background-color:var(--ta-tai4)}
+td.tai9{color:var(--main-bg)}
+.sak{background-color:var(--ta-sakura)}
+.hirou{background-color:var(--ta-hirou)}
+.akahirou{background-color:var(--ta-akahiro)}
+.hpzan{color:var(--ta-hpzan)}
+.tato{font-size:90%}
+.syugyo{background-color:var(--ta-syugyo)}
+.kinji{background:linear-gradient(90deg,rgba(255,255,255,0) 88%,#a7c769 12%)}
+/*カンスト*/
+.kan, .hit{font-weight:bold}
+.tokan{color:#888888;font-size:80%}
+.soubion{color:var(--ta-soubion);font-weight:bold}
+/*부적*/
+.ma{color:#0066FF;font-size:105%}
+.mak{color:#BF408C;font-size:105%}
+/*傷*/
+.jyusyo{background-color:var(--ta-jyusyo)}
+.cyusyo{background-color:var(--ta-cyusyo)}
+.keisyo{background-color:var(--ta-keisyo)}
+.teirecyu{background-color:var(--ta-teire)}
+/*鍵*/
+.nokey{background-color:var(--ta-nokey)}
+#tno:hover,#lv:hover,#atk:hover,#def:hover,#mov:hover,#bac:hover,#loy:hover,#sco:hover,#hid:hover,#hiro:hover,#tai:hover,#hp:hover,#ranbu:hover{color:#FF6600}
+
+/*도장 말*/
+table.touso{border-collapse:collapse;font-size:12px;}
+table.touso, table.touso tr{border:1px solid var(--border-col);padding:1px}
+table.touso td.rig{border-width:1px 1px 1px 0px;border-style:solid;border-color:var(--border-col);text-align:right}
+table.touso caption{padding:2px;text-align:left}
+.eq1, .eq4, .eq7, .eq10, .eq13, .eq16, .eq19, .eq22, .eq25, .eq28, .eq31, .eq34{background-color:var(--touso-nm);}
+.eq2, .eq5, .eq8, .eq11, .eq14, .eq17, .eq20, .eq23, .eq26, .eq29, .eq32, .eq35{background-color:var(--touso-jo);}
+.eq3, .eq6, .eq9, .eq12, .eq15, .eq18, .eq21, .eq24, .eq27, .eq30, .eq33, .eq36{background-color:var(--touso-tk);}
+.ho10001, .ho10002, .ho10003, .ho10004, .ho10005, .ho10006, .ho10007, .ho10008,
+.ho11011, .ho11021, .ho11031, .ho11041, .ho11042, .ho11043, .ho11044, .ho11045, .ho11046, .ho11047{background-color:var(--touso-uma);}
+.eq31{background:linear-gradient(135deg,var(--touso-mam) 60%,var(--touso-nm) 40%)}
+.eq32{background:linear-gradient(135deg,var(--touso-mam) 60%,var(--touso-jo) 40%)}
+.eq33{background:linear-gradient(135deg,var(--touso-mam) 60%,var(--touso-tk) 40%)}
+.eq34{background:linear-gradient(135deg,var(--touso-sui) 60%,var(--touso-nm) 40%)}
+.eq35{background:linear-gradient(135deg,var(--touso-sui) 60%,var(--touso-jo) 40%)}
+.eq36{background:linear-gradient(135deg,var(--touso-sui) 60%,var(--touso-tk) 40%)}
+.def{background-color:#7e8ca0;}
+
+
+/*도장일람*/
+div.tousoudata{width:576px;border:1px solid var(--border-col);padding:2px;margin:2px}
+div.touname{width:100px;padding:0px;float:left;font-weight:bold;font-size:102%}
+div.toupara{width:300px;padding:0px;float:left}
+div.toukyara{padding:0px}
+
+/*도장・출진*/
+#tanto_end{float:left;width:175px;}
+#tanto_set,#kekkabody,#kekkatenbody{width:510px;height:60px;padding:2px;margin:2px;tab-size:2;}
+#tousokekka{width:640px;height:78px;border:1px solid var(--border-col);padding:2px;margin:2px;tab-size:2;}
+.bumember{padding:2px;margin:2px;float:left;}
+#rootjyoho{width:400px;height:50px;border:1px solid var(--border-col);padding:2px;margin:2px;}
+#recipe{font-size:85%;color:#999999}
+
+/*임무*/
+.mo{background-color:var(--soz-mo);}
+.gy{background-color:var(--soz-gy);}
+.ri{background-color:var(--soz-ri);}
+.to{background-color:var(--soz-to);}
+.tasei{background-color:var(--ta-sakura);text-align:right}
+.sumi{background-color:var(--ta-teire);text-align:right}
+.mikan{text-align:right}
+.mimo{background-color:var(--nin-mo);}
+
+/*자원*/
+.nsigw{width:690px;padding:2px;letter-spacing:0.02em}
+.nsig0{background-color:var(--soz-mo);border:1px solid var(--soz-mo-bd);padding:1px}
+.nsig1{background-color:var(--soz-gy);border:1px solid var(--soz-gy-bd);padding:1px}
+.nsig2{background-color:var(--soz-ri);border:1px solid var(--soz-ri-bd);padding:1px}
+.nsig3{background-color:var(--soz-to);border:1px solid var(--soz-to-bd);padding:1px}
+.dais, .nhdais{color:var(--ta-soubion);}
+.ensimd{width:120px;margin:2px;display:inline-block}
+.ensiml{width:150px}
+input[name="esigensim"],input[name="esigensims"]{display:none;}
+input[name="esigensim"]:checked+label::after,input[name="esigensims"]:checked+label::after{content:'\2714';color:#ff0000;margin-left:3px;}
+input[name="esigensim"]:checked+label,input[name="esigensims"]:checked+label{color:#8e3e3e}
+#ensei_sim th{width:120px}
+#ensei_sim table{display:inline-table}
+.kisetu1{color:#cddc39}
+.kisetu2{color:#e770d3}
+
+/* 도첩*/
+.muon{color:#be557f;font-weight:bold}
+.muoff{color:#919191;}
+.nyusyu{background-color:var(--ta-syugyo);}
+
+/*MAP*/
+.rain, .city, .room, .night{color:#9ea2a7; border-color:#9ea2a7;
+border-style:solid;border-width:1px;border-radius:1px; background-color:#ffffff;
+font-size:9pt;padding-left:1px;padding-top:1px;padding-bottom:1px;padding-right:0px;margin:2px;}
+.rain{color:#0083b4; border-color:#0083b4;background-color:#e3f5ff}
+.night{color:#151171; border-color:#151171;background-color:#cfdbf4}
+.city{color:#5e6a01; border-color:#5e6a01;background-color:#e8f8d3}
+.room{color:#8b4500; border-color:#8b4500;background-color:#f8eddc}
+
+/*드롭*/
+.maparea{background-color:var(--dr-area)}
+.dtanto{background-color:var(--dr-tan)}
+.dnobo{background-color:var(--dr-nobo)}
+.dboss{background-color:var(--dr-boss)}
+.dnomal{background-color:var(--dr-nomal)}
+.droptxt{padding:2px;margin:2px;}
+#tantoka_box{display:flex;flex-wrap:wrap;width:700px;}
+#tantoka_box p{margin:2px;width:105px}
+#tantoka_box div{margin:8px 2px 3px 2px;padding:1px 5px;width:690px;}
+#tantoka_box .tou_wrap{height:1px;margin:0px 350px;}
+.dnobo_d{border-bottom:2px solid var(--dr-nobo);color:var(--dr-nobo-br)}
+.dboss_d{border-bottom:2px solid var(--dr-boss);color:var(--dr-boss-br)}
+.dnomal_d{border-bottom:2px solid var(--dr-nomal);color:var(--dr-nomal-br)}
+#dbtnbox button{margin:1px;padding:1px;}
+#dbtnbox button:hover{background-color:var(--btn-hover);}
+
+/*통지*/
+.timer_waku{border:1px solid var(--border-col);line-height:150%;padding:2px;margin:1px;width:165px;float:left;font-size:12px;vertical-align:middle;}
+.timerset{color:#be557f}
+
+/*입수일 기록タブ*/
+#tousouhihead{margin:7px 0px;padding:22px 0px 5px 0px;background:linear-gradient(transparent 88%,#355898 88%);border-radius:2px;}
+#tousouhihead input{width:0px;height:0px;opacity:0;margin:0px;padding:0px}
+#tousouhihead label{display:inline-block;margin:0px 1px 0px 0px;padding:6px 8px 5px 8px;
+  border-width:0px;border-top-left-radius:2px;border-top-right-radius:10px;border:1px solid #355898;
+  color:#ffffff;background-color:#6689c7;font-weight:bold;}
+#tousouhihead label:hover{color:#ffcbdf}
+#tousouhihead input[type="radio"]:checked + label{background:#355898;}
+#touhi_info{font-size:120%;font-weight:bold;padding:40px 10px;margin:3px;background-color:var(--ta-teire);border-radius:2px;}
+#tousouhi{min-width:690px;padding:0px;margin:2px;min-height:400px}
+
+/*장비シミュ*/
+.simbt,.simemp{
+  padding:2px;margin:1px;float:left;cursor:pointer;
+  border:1px solid #aaaaaa;width:48px;
+  font-size:9pt;color:var(--main-col);border-radius:2px;
+}
+.simemp{visibility:hidden}
+.splus{color:var(--ta-souuma);font-weight:bold}
+#scange{
+  position:absolute;z-index:5;background-color:var(--main-bg);
+  border:1px solid #00A3CC;padding:3px;font-size:9pt;box-shadow: 3px 3px 3px rgba(0,0,0,0.4);border-radius:5px;
+  font-size:12px;vertical-align:bottom;display:none;
+}
+#scange div{margin:3px 0px 3px 0px}
+#scange span{width:35px;display:block;float:left;margin:2px;}
+#scange input{width:0px;height:0px;opacity:0;margin:0px;padding:0px;}
+#scange label{display:inline-block;margin:1px;padding:1px;
+  border:1px solid #868585;border-radius:2px;color:#464646;background-color:#efefef;}
+#scange label:hover{color:#c43971;background-color:#d6b5b8;}
+#scange span.wide{width:55px;margin:0px}
+#scange span.close{width:35px;font-size:110%}
+.tousotab{float:left;font-size:12px;margin:5px;border-collapse:collapse}
+.tousotab th,.tousotab td{padding:1px;text-align:right;border:1px solid #dddddd;}
+.tousotab td:first-child,.tousotab th:first-child{text-align:left;}
+.eqfocus{color:#ff0000;}
+.nami{color:#ff0000}
+.clear{clear:both;}
+
+/*TOP戻*/
+a#to-top{
+	display:block;position:fixed;z-index:100;
+	right:12px;bottom:25px;width:37px;height:37px;
+	color:#ffffff00;
+}
+a#to-top::before{
+	content: "";
+	display:block;position: absolute;
+	top:0px;left:0px;width:36px;height:36px;
+	border:1px solid #1976d2;
+	border-radius:50%; -webkit-border-radius:50%; -moz-border-radius:50%; 
+	background:var(--main-bg);opacity:0.7;
+}
+a#to-top::after{
+	content: "";
+	display:block;position: absolute;
+	top:14px;left:13px;width:8px;height:8px;
+	transform: rotate(45deg); 
+	border-top:3px solid #1976D2;border-left:3px solid #1976D2;
+}
+a#to-top:hover::before{background-color:#ffc107;}
+
+/*저장データ系ボタン*/
+.showbtn{
+  display:inline-block;
+  line-height:100%;
+  margin:3px;padding:4px 10px;
+  text-align:center;
+  color: #303030; background-color:var(--hozon-sbtn);
+  font-size:12px;font-weight:700;
+  border: 1px solid #6387c2;
+  border-radius:12px;
+  transition: 0.2s;
+}
+a.showbtn:hover{
+  text-decoration: none;
+  border-color:#c2738b;
+  background-color:var(--btn-hover);
+}
+.csvb{
+  margin-left:10px;
+  background-color:var(--hozon-cbtn);
+  border-color:#7dbd70;
+}
+
+/*설정*/
+.nowset{font-weight:bold;margin:2px;color:var(--ta-soubion)}
+
+/*이미지 편집 영역*/
+#editwaku{margin:3px;padding:4px;background-color:var(--canvas-waku);width:1190px;border-radius:3px;}
+#edithead,#editfoot{margin:2px 0px;padding:2px 5px;border:1px solid var(--canvas-br);background-color:var(--canvas-bg);border-radius:3px}
+#editmenu .edittitle{margin-top:5px;padding:2px 5px;border:1px solid var(--canvas-br);background-color:var(--canvas-bg);font-size:9pt;border-radius:5px;}

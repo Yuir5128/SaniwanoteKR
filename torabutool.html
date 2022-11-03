@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- 사니와수첩 Copyright (c) 2015 Kagami.E -->
+<html lang="ja"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title>사니와수첩 - 토우러브 보조 툴</title>
+<script TYPE="text/javascript" src="dark.js"></script>
+<link rel="stylesheet" href="torabutool.css">
+<style TYPE="text/css">
+body{font-family:'MS PGothic','Hiragino Kaku Gothic Pro W3',sans-serif,'Meiryo UI';}
+</style>
+</head>
+<body>
+<div id="header">
+<div id="date"></div>
+<div id="menubar"><a href="#">TOP</a><a href="#tokentop">도검목록</a><a href="#tousouhihead">입수일 기록</a><a href="settei.html" target="_blank">설정</a><a href="storagedata.html" target="_blank">저장정보</a></div>
+</div>
+<div id="container">
+<div id="flontpanel"></div>
+<div id="tokentop" class="con_head" style="background:linear-gradient(transparent 80%,#e1e5ea 70%);">도검정보</div>
+<div class="wakuhead" style="width:690px"><span id="bukeihead">부대합계（도검＋도장）</span>　　<span id="lvhei"></span></div>
+<div id="butaikei" class="wakubody" style="width:690px">출진/연련/편성/도검제작/연결화면에서 데이터 취득</div>
+
+<div id="kentb_box">
+<div id="kentb_head">
+<div id="kentb_para"><button id="soubi_swi" class="theadbtn">파라미터 표시 변경</button> <span id="parasetu">도검＋도장</span></div>
+<div id="hyo_set_btn">
+<button>도검목록  표시 설정</button>
+<div id="hyo_set">
+<p>다음번 도검 데이터 취득 시 반영됩니다.</p>
+<p><label><input type="checkbox" id="lvexp">Lv정렬로 경험치 사용</label></p>
+<p><label><input type="checkbox" id="icoflg">도종 아이콘 표시 </label></p>
+<p><label><input type="checkbox" id="compflag">연결화면의 특수 동작 정지</label></p>
+<p><label><input type="checkbox" id="levelflag" checked>Lv1 도검 표시 </label></p>
+<p><label><input type="checkbox" id="kagiflag">잠긴 도검 이외도 표시 </label><br><small>상시 사용은 비추천, 도검명 부분은 회색 표시 </small></p>
+</div>
+</div>
+<button id="hyocopy" class="theadbtn" style="margin-left:30px;" title="도검목록をクリップボードにコピー">複写</button> 
+</div>
+<div id="sibori">
+간략 표시 
+<label><input type="checkbox" id="tanC" checked>단</label>
+<label><input type="checkbox" id="wakiC" checked>협</label>
+<label><input type="checkbox" id="uchiC" checked>타</label>
+<label><input type="checkbox" id="tatiC" checked>태</label>
+<label><input type="checkbox" id="ootaC" checked>대태</label>
+<label><input type="checkbox" id="yanaC" checked>창치검</label>
+　<label><input type="checkbox" id="kimaeC" checked>일반-특</label>
+<label><input type="checkbox" id="kiwameC" checked>극</label>
+<label title="Lv99전환"><input type="checkbox" id="lvknstC" checked>완료</label> 
+<label><input type="checkbox" id="bugaiC" checked>편성외</label>
+　<button id="zensen">전부 선택</button>　<button id="zenkai">전부 해제</button>
+</div>
+<table class="ta" id="kentb">
+<thead><tr><th id="tai">부대</th><th id="tno">No</th><th>도검명　*부적</th><th id="lv">Lv</th><th id="hp">생존</th><th id="hiro">피로</th><th id="atk">타격</th><th id="def">통솔</th><th id="mov">기동</th><th id="bac">충력</th><th id="loy">필살</th><th id="sco">정찰</th><th id="hid">은폐</th><th>도장1</th><th>도장2</th><th>도장3</th><th>말</th><th id="ranbu">난무</th><th id="nyusyu_td" class="hide">입수일</th></tr></thead><tbody id="kentable"><tr><td colspan="19">
+※자물쇠가 달린 도검만 표시됩니다. 잠기지 않은 도검도 표시하려면 하단의 체크박스에서 전환 가능합니다.<br><br>
+출진/연련/편성/도검제작/연결화면에서 데이터 취득<br>
+부대，No，Lv，타격～피로，난무의 파라미터는 1째줄 타이틀 클릭으로 오름차순 내림차순으로 전환할 수 있습니다.<br>
+피로 회복은 게임 사양에 의해 실시간으로 표시되지 않습니다.<br>
+<b class="ma">*</b> - 부적　<b class="mak">*</b> - 부적・극
+</td></tr></tbody>
+</table>
+※게임의 사양상 시간 경과에 따른 피로도의 회복은 반영되지 않습니다. 수치 갱신은 출진・원정으로부터 귀환시나 아이템 사용 시 반영됩니다.<br>
+<div id="hirotip"></div>
+<div id="hozonmenu">
+<button id="hyohozon" class="theadbtn" title="도검목록を기록">기록</button>
+　현재 표시중의 도검 목록을 기록합니다. 저장은 1건분만, 덮어씌워서 저장<br>
+<input type="text" id="hozonmemo" maxlength="50" size="40" pattern="[^!-/:-@\[-`{-~ｦ-ﾟ]*" placeholder="메모50文字まで　半角カナ・記号사용不可"> 半角カナ・記号・スペースは저장時자동삭제されます
+<div id="hozonOK"></div>
+</div>
+</div>
+
+<br>
+<div id="tousouhihead">
+<input type="radio" name="tou_hi_r" id="tousou_r"><label for="tousou_r">소지말・도장일람</label>
+<input type="radio" name="tou_hi_r" id="nyusyubi_r"><label for="nyusyubi_r">도검입수일</label>
+<input type="radio" name="tou_hi_r" id="ensei_r"><label for="ensei_r">원정목록</label>
+<input type="radio" name="tou_hi_r" id="drop_r"><label for="drop_r">드롭목록</label>
+<input type="radio" name="tou_hi_r" id="ssimyu_r"><label for="ssimyu_r">장비 시뮬레이터</label>
+<input type="radio" name="tou_hi_r" checked id="close_r"><label for="close_r">닫는다</label>
+<!--button id="tousou_swi">소지말・도장일람</button>
+<button id="nyusyubi_swi">도검입수일</button>
+<button id="enseihyo_swi">원정목록</button>
+<button id="drop_swi">드롭목록</button>
+<button id="close_swi">닫는다</button-->
+</div>
+<div id="tousouhi"><div id="touhi_info">※위의 탭을 클릭해서 입수일 기록을 표시합니다（도검 데이터 취득 후）</div></div>
+<br>
+<div id="teireuchi"><div id="teirehead" class="con_head">수리・내번・도검제작　완료시간</div>
+<div style="float:left;width:250px"><div class="wakuhead">수리</div><div id="teire" class="wakubody">수리화면에서 데이터 취득<br><br><br><br></div></div>
+<div style="float:left;width:250px"><div class="wakuhead">내번</div><div id="uchiban" class="wakubody">내번화면에서 데이터 취득<br><br><br><br></div></div>
+<div style="float:left;width:200px"><div class="wakuhead">도검제작</div><div id="tanto" class="wakubody">도검제작화면에서 데이터 취득<br><br><br><br></div></div>
+<br style="clear:both">
+</div>
+
+<div class="waku" style="border-color:#ee0000;font-size:9pt;line-height:110%">
+【이용상의 주의】<br>
+서버 접속은 하지 않았기 때문에 공식 규약 위반은 되지 않았다고 생각합니다만, 회색지대입니다.<br>
+해당 툴의 이용은 이용자 자신의 책임 하에 실시해 주십시오.<br>
+이용과 관련하여 발생한 손해, 2차적으로 발생한 손해에 대해 제작자 측에서 보증할 수 없습니다.<br>
+사니와수첩 ver1.0.32 (c) 2015-2022 Kagami.E https://half-a.net/saniwanote
+</div>
+</div>
+<a href="#" id="to-top">TOP</a><div id="tousouchip"></div>
+<script src="jquery.js"></script>
+<script src="torabutool.js"></script>
+</body>
+</html>

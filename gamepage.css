@@ -1,0 +1,43 @@
+:root{
+  --btn-hov:#ffdddd;
+  --btn-sbtn:#d3eeff;
+  --btn-bbtn:#e3ffe5;
+  --btn-img:1;
+}
+:root[theme-mode='dark']{
+  color-scheme:dark;
+  --btn-hov:#865763;
+  --btn-sbtn:#59819c;
+  --btn-bbtn:#579b5b;
+  --btn-img:2;
+}
+.hide{display:none;}
+.hidden{visibility:hidden !important;}
+
+#ctbutton{
+  width:1010px;padding:0px;margin:4px auto;font-size:10px;
+  font-family:'Hiragino Kaku Gothic Pro W3','Meiryo','Yu Gothic',sans-serif;
+}
+
+#ctbutton button{display:inline-block;width:50px;height:16px;padding:0px;margin:0px 4px;bottom:3px;border-radius:3px;
+  text-align:center;overflow:hidden;font-size:1em;border:1px solid #8e8e8e;vertical-align:bottom;}
+#ctbutton input{margin:0px 8px;width:15px;height:15px;vertical-align:bottom;}
+#ctbutton button:hover{background-color:var(--btn-hov);border:1px solid #8e8e8e;}
+#dm_swi{width:82px !important;}
+#resize_swi1,#resize_swi2,#resize_swi3{width:18px !important;}
+#resize_swi2{margin:0px !important;}
+#zoomenu{width:58px;padding:0px;margin:0px;position:relative;display:inline-block;}
+#zoombar{
+  display:none; width:58px;padding:0px;margin:0px;position:absolute; z-index:100; overflow:hidden;
+}
+#zoombar button{width:50px; height:16px;padding:0px;margin:0px 4px; overflow:hidden;border-radius:3px;}
+#zoomenu:hover #zoombar{display:block;}
+button.sbtn{background-color:var(--btn-sbtn);}
+button.bbtn{background-color:var(--btn-bbtn);}
+button span{font-size:1em;vertical-align:top;}
+#ctbutton img{filter:brightness(var(--btn-img))}
+
+/*@media (prefers-color-scheme:dark){
+  :root{color-scheme:dark;}
+  body.appdetail-gh-phase02,#tracking_area,#page,#w{background-color:#1c1c1a}
+}*/

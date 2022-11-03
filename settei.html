@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- 사니와수첩 Copyright (c) 2015 Kagami.E -->
+<html lang="ja"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title>사니와수첩 설정</title>
+<script TYPE="text/javascript" src="dark.js"></script>
+<link rel="stylesheet" href="torabutool.css">
+<style type="text/css">
+button{width:140px;}
+.setteiwaku{width:580px;margin:36px 3px 3px 3px;}
+.settei{line-height:150%;width:550px;padding:3px;border:1px solid var(--border-col);}
+.dhead{width:550px;margin-top:20px;border-bottom:0px}
+#popstatus{color:#cd186b;}
+#popstatus p{padding:2px;border-radius:2px;background-color:#ffb32f;color:#1f1f1f;font-weight:bold;}
+#savebt{margin:0px;top:0px;width:100%;height:28px;position:fixed;padding:2px;background-color:var(--main-bg);color:#cd186b;}
+#save{color:#ffffff;background-color:#3a81de;border-width:1px;padding:3px 8px} 
+#copy{margin-top:10px}
+label{font-weight:bold}
+/*radio*/
+.radioset {margin:10px 0px 0px 5px;padding-bottom:7px}
+.radioset p{font-size:1.2em;font-weight:bold;}
+.radioset input{display:none;}
+.radioset label{cursor:pointer;display:inline-block;margin:3px 0px;
+    padding:4px 10px;text-align:center;background-color:#c1c1c1;color:#504f4f;
+}
+.radioset input:checked + label{background:#af4d6d;color:#f1f1f1;}
+.radioset label:hover,.radioset input:checked + label:hover{background:#98b34a;color:#f4ff93;transition:0.2s;}
+.radioset label:first-of-type{border-radius:5px 0px 0px 5px;}
+.radioset label:last-of-type{border-radius:0px 5px 5px 0px;}
+.wset_l{border-radius:5px !important}
+</style>
+</head>
+<body>
+<div id="savebt"><button id="save">설정을 저장</button>　<span id="status"> </span></div>
+<div class="setteiwaku">
+<div class="dhead">도검정보 패널 기동 시의 설정</div><div class="settei">
+<div class="radioset">
+<p>【도검목록】 Lv1 도검 표시 </p>
+<input type="radio" name="lvone" id="leveloneshow"><label for="leveloneshow"> 표시 </label><input type="radio" name="lvone" id="levelone"><label for="levelone">非 표시 </label>
+<br>
+육성하지 않은 칼을 도검목록에서 비표시하고 싶은 경우 등에<br>※도검패널 상에서도 일시적으로 전환 가능합니다.
+</div>
+
+<div class="radioset">
+<p>【도검목록】 레벨 정렬에서 사용하는 수치 </p>
+<input type="radio" name="keiken" id="lvflug"><label for="lvflug">Lv値</label><input type="radio" name="keiken" id="keikenflug"><label for="keikenflug">경험치</label>
+<br>
+Lv값을 사용 … 레벨 수치를 사용해 정렬합니다<br>
+경험치 사용 … 경험치 순으로 정렬합니다. 극 도검이 있는 경우 레벨순이 되지 않습니다.<br>※도검패널 상에서도 일시적으로 전환 가능합니다.
+</div>
+
+<div class="radioset">
+<p>【도장】 작성 정보의 출력 형식</p>
+<input type="radio" name="touso" id="t_def"><label for="t_def">デフォルト</label><input type="radio" name="touso" id="t_custom"><label for="t_custom">커스텀</label>
+<br>
+디폴트 예시：<br>2021-10-20 04:05:00  도장(특)　목/옥/냉/숫  오후다  근시 이름 [극] Lv근시　（벚꽃）<br>
+커스텀 예시：<br>Lv사니와/목/옥/냉/숫/오후다/근시 이름극/Lv근시/벚꽃 눈보라/도장병/특/
+</div>
+
+<div class="radioset">
+<p>도검패널의 다크 모드설정</p>
+<input type="radio" name="ddark" id="ddark"><label for="ddark">다크 모드</label><input type="radio" name="ddark" id="ddark_n"><label for="ddark_n">라이트 모드</label>
+<br>도검패널 등의 게임 페이지 이외의 다크 모드／라이트 모드를 바꿉니다.<br>（설정 후의 패널 기동 시에 반영됩니다.）<br>※게임 페이지와는 설명이 다릅니다.
+</div>
+</div>
+
+<div class="dhead">게임 페이지의 동작 설정</div><div class="settei">
+<div class="radioset">
+<p>페이지의 이동・리로드・닫기 전에 경고 알림을 표시 </p>
+<input type="radio" name="idoflug" id="idoflug"><label for="idoflug">ON</label><input type="radio" name="idoflug" id="idoflug_n"><label for="idoflug_n">OFF</label>
+<br>※다음번 게임 페이지를 열었을 때부터 적용됩니다.
+</div>
+
+<div class="radioset">
+<p>다른 창으로 전환 시 자동으로 스크롤 잠금</p>
+<input type="radio" name="sclock" id="sclock"><label for="sclock">ON</label><input type="radio" name="sclock" id="sclock_n"><label for="sclock_n">OFF</label>
+<br>게임 페이지의 새 창 전환 시 스크롤바가 나오지 않도록 합니다.<br>
+공지사항 등을 봤을 때는 페이지 상으로 나중에 전환 가능합니다.
+</div>
+
+<div class="radioset">
+<p>게임 페이지의 다크 모드설정</p>
+<input type="radio" name="gdark" id="gdark"><label for="gdark">다크 모드</label><input type="radio" name="gdark" id="gdark_n"><label for="gdark_n">라이트 모드</label>
+<br>게임 페이지의 다크 모드／라이트 모드를 변경합니다.<br>（설정후 패널 기동 시에 반영됩니다）<br>※도검패널등과는 설정이 별개입니다.
+</div>
+
+<div class="radioset">
+<p>새 창으로 열 시 사이즈와 위치 기록</p>
+3종류의 창 사이즈＋줌 배율을 저장할 수 있습니다（통상일 때는 배율 설정만 적용）<br>
+별개의 창 전환 시에는『1』의 설정이 적용됩니다.<br>
+<div id="winstatus" class="nowset"></div>
+<br>
+설정 대상을 선택<br>
+<input type="radio" value="wset1" id="wset1" name="winno" class="radio" checked><label for="wset1" class="wset_l">『1』</label>
+<input type="radio" value="wset2" name="winno" id="wset2" class="radio"><label for="wset2" class="wset_l">『2』</label>
+<input type="radio" value="wset3" name="winno" id="wset3" class="radio"><label for="wset3" class="wset_l">『3』</label><br>
+↓<br>
+게임 페이지를 별도의 창으로 표시하는 걸로 전환해<br>
+원하는 사이즈와 위치에 배치한 후, 아래 버튼으로 정보를 받아주세요.<br>
+배율은「Ctrl」＋「+」，「Ctrl」＋「-」또는, 통상일 시 브라우저의 일반메뉴에서 조정할 수 있습니다<br>
+<button id="popwin">윈도우 정보 취득</button> <button id="defwin">디폴트 설정으로 되돌리기</button>
+</div>
+<div id="popstatus">　</div>
+</div>
+<!--div class="dhead">출진時警告アラート</div>
+<div id="alertstatus" class="nowset"></div>
+<label><input type="checkbox" id="keikoku">출진時警告アラートを出す</label><br>
+메모リが少ない環境用、출진중は메모リ사용量が상がるため출진의 前にアラートを出します。<br>
+※설정は도검정보패널의 起動時に読み込まれます。<br>
+</div-->
+<input type="checkbox" id="all_delcheck">모든 설정을 삭제하려면 왼쪽에 체크하고 버튼을 눌러주세요<button id="del">설정을 리셋</button>
+<div id="synccapacity" class="capacity"></div>
+</div>
+<div id="copy">사니와수첩 (c) 2015-2022 Kagami.E <a href="https://half-a.net/saniwanote" target="_blank">https://half-a.net/saniwanote</a></div>
+<script TYPE="text/javascript" src="settei.js"></script>
+</body>
+</html>

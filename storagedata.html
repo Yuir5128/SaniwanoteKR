@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- 사니와수첩 Copyright (c) 2015 Kagami.E -->
+<html lang="ja"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title>사니와수첩 기록 내용</title>
+<script TYPE="text/javascript" src="dark.js"></script>
+<link rel="stylesheet" href="torabutool.css">
+<style TYPE="text/css">
+body{margin:2px;font-size:10pt;}
+table{min-width:500px;}
+button{width:140px;}
+#copy{float:left}
+.namadata{margin:2px;color:#555555;tab-size:3}
+</style>
+</head>
+<body>
+<div id="container">
+이력은 DevTool의 도검정보패널이 동작하고 있을 때만 기록됩니다.<br>
+테스트 단계이기 때문에, 기능은 표시와 CSV 출력 뿐입니다.<br>
+csv는 utf-8 BOM으로 개행 CRLF（엑셀 등으로 읽는 용의 형식）<br>
+<div class="con_head">자원기록</div>
+<a class="showbtn" id="show_sigen">이력 표시</a><a class="showbtn csvb" id="down_sigen">CSV저장</a>
+<table class="ta" id="sigentable">
+<thead><tr><th>기록일시</th><th>목탄</th><th>옥강</th><th>냉각재</th><th>숫돌</th></tr></thead>
+<tbody id="sigenbody"><td colspan="5">
+그 날 처음으로 혼마루에 접속했을 때 기록됩니다.<br>
+100건이 넘으면 오래된 것부터 자동으로 삭제됩니다.<br>
+<div id="sigen_err" class="nowset"></div>
+</td></tbody>
+</table>
+<input type="checkbox" id="sigen_delcheck">삭제하시려면 왼쪽에 체크하고 버튼을 눌러주세요.
+<button id="sigen_del" name="sigen">자원기록삭제</button>
+
+<div class="con_head">도장작성이력</div>
+<a class="showbtn" id="show_touso">이력 표시</a><a class="showbtn csvb" id="down_touso">CSV저장</a>
+<table class="ta" id="tousotable">
+<thead><tr><th>작성일시</th><th>도장</th><th>목</th><th>옥</th><th>냉</th><th>숫</th><th>오후다</th><th>근시</th><th>근시Lv</th><th>피로</th><th>사니와Lv</th></tr></thead>
+<tbody id="tousobody"><td colspan="11">
+도장작성이력을 표시합니다.<br>
+100건이 넘으면 오래된 것부터 자동으로 삭제됩니다.<br>
+<div id="touso_err" class="nowset"></div>
+</td></tbody>
+</table>
+<input type="checkbox" id="touso_delcheck">삭제하시려면 왼쪽에 체크하고 버튼을 눌러주세요.
+<button id="touso_del" name="touso">도장결과삭제</button>
+
+<div class="con_head">10연속 도장작성이력</div>
+<a class="showbtn" id="show_jyuren">이력 표시</a><a class="showbtn csvb" id="down_jyuren">CSV저장</a>
+<table class="ta" id="jyurentable">
+<thead><tr><th>작성일시</th><th>도장</th><th>목</th><th>옥</th><th>냉</th><th>숫</th><th>오후다</th><th>근시</th><th>근시Lv</th><th>피로</th><th>사니와Lv</th></tr></thead>
+<tbody id="jyurenbody">
+  <td colspan="11">10연속 도장작성이력을 표시합니다.<br>100건（10연속 10회분）을 넘으면 오래된 것부터 1번의 10연속 작성 단위로 자동으로 삭제됩니다.
+    <div id="jyuren_err" class="nowset"></div>
+  </td></tbody>
+</table>
+<input type="checkbox" id="jyuren_delcheck">삭제하시려면 왼쪽에 체크하고 버튼을 눌러주세요.
+<button id="jyuren_del" name="jyuren">10연속 결과 삭제</button>
+
+<div class="con_head">도검제작이력</div>
+도검제작 이력에 결과도 취득되는 것은 단도가 시작될 때 도움패를 사용한 경우에만 가능합니다.<br>
+완성 후, 또는 중간에 도움패를 사용했을 경우의 취득 결과는 아래 텍스트 영역에 표시（도검제작이력과는 연동되어 있지 않습니다）<br>
+<a class="showbtn" id="show_tanto">이력 표시</a><a class="showbtn csvb" id="down_tanto">CSV저장</a>
+<table class="ta" id="tantotable">
+<thead><tr><th>실행일시</th><th>도검제작결과</th><th>소요 시간</th><th>목</th><th>옥</th><th>냉</th><th>숫</th><th>오후다</th><th>근시</th><th>근시Lv</th><th>피로</th><th>사니와Lv</th></tr></thead>
+<tbody id="tantobody"><td colspan="12">
+도검제작이력을 표시합니다.<br>
+100건이 넘으면 오래된 것부터 자동으로 삭제됩니다.<br>
+<div id="tanto_err" class="nowset"></div>
+</td></tbody>
+</table>
+<br>
+<textarea id="kekkabody" placeholder="『수취일시　단도된 도검』으로 표시 "></textarea>
+<br>
+삭제하려면 각 버튼 왼쪽에 체크하시고 버튼을 눌러주세요.<br>
+<input type="checkbox" id="tanto_delcheck">　<button id="tanto_del" name="tanto">도검제작이력삭제</button>　　　
+<input type="checkbox" id="kekka_delcheck">　<button id="kekka_del" name="kekka">수취결과삭제</button><br>
+
+<div class="con_head">10연속 도검제작이력</div>
+보통으로 실행 시엔 소요 시간, 동시에 도움패를 사용할 때는 도검제작기록이 됩니다.<br>
+완성 후 또는 중간에 도움패를 사용했을 때의 수취 결과는 아래 텍스트 영역에 표시（도검제작이력과는 연동되어 있지 않습니다）<br>
+<a class="showbtn" id="show_tantoten">이력 표시</a><a class="showbtn csvb" id="down_tantoten">CSV저장</a>
+<table class="ta" id="tantotentable">
+<thead><tr><th>실행일시</th><th>도검제작결과</th><th>소요 시간</th><th>목</th><th>옥</th><th>냉</th><th>숫</th><th>오후다</th><th>근시</th><th>근시Lv</th><th>피로</th><th>사니와Lv</th></tr></thead>
+<tbody id="tantotenbody"><td colspan="12">
+도검제작이력을 표시합니다.<br>
+200건（10연속 20회분）을 넘으면 오래된 것부터 10연속 단위로 자동으로 삭제됩니다.<br>
+<div id="tantoten_err" class="nowset"></div>
+</td></tbody>
+</table>
+<br>
+<textarea id="kekkatenbody" placeholder="『수취일시　단도된 도검』으로 표시 "></textarea>
+<br>
+삭제하려면 각 버튼 왼쪽에 체크하시고 버튼을 눌러주세요.<br>
+<input type="checkbox" id="tantoten_delcheck">　<button id="tantoten_del" name="tantoten">도검제작이력삭제</button>　　　
+<input type="checkbox" id="kekkaten_delcheck">　<button id="kekkaten_del" name="kekkaten">수취결과삭제</button><br>
+
+
+<div class="con_head" style="--con-head-back:#e1e5ea 70%">도검목록 간이 저장</div>
+현재는 1건 분만 저장이 가능합니다.『기록』버튼을 누른 시점에서의 표 상태（소트・압축 등）그대로 저장됩니다.<br>
+CSV타이틀명은 『저장일시-파라미터 표시 종류-메모（입력되어 있는 경우）.csv』가 됩니다.<br>
+<a class="showbtn" id="show_tokenhyo">도검목록 표시 </a><a class="showbtn csvb" id="down_tokenhyo">CSV저장</a>
+<div id="kentablehead" class="nowset"></div>
+<table class="ta hide" id="kentable">
+<tbody id="kentablebody"></tbody>
+</table>
+<input type="checkbox" id="tokendata_delcheck">삭제하시려면 왼쪽에 체크하고 버튼을 눌러주세요.
+<button id="tokendata_del" name="tokendata">도검목록 삭제</button>
+
+
+<div class="con_head" style="--con-head-back:#e1e5ea 70%">그 외의 저장 정보</div>
+<div id="saniwalv" class="nowset"></div>
+<div id="syugyou" class="nowset"></div>
+
+<div class="con_head" style="--con-head-back:#e1e5ea 70%">사용 용량・전체 데이터 삭제</div>
+<div id="localcapacity" class="capacity"></div>
+<br>
+<input type="checkbox" id="all_delcheck">삭제하시려면 왼쪽에 체크하고 버튼을 눌러주세요.<button id="dellocal">모든 데이터를 삭제</button>
+
+<!--div class="con_head">syncstrageデータ</div>
+<div id="synccapacity" class="capacity"></div>
+<pre id="syncstoragedata" class="namadata"></pre>
+
+<button id="save">설정을 저장</button>
+<label><input type="checkbox" id="levelone"></label-->
+</div>
+<div id="copy">사니와수첩 (c) 2015-2021 Kagami.E <a href="https://half-a.net/saniwanote" target="_blank">https://half-a.net/saniwanote</a></div>
+<script TYPE="text/javascript" src="storagedata.js"></script>
+</body>
+</html>
