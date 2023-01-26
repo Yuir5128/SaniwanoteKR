@@ -143,11 +143,11 @@ function hensyu(swi){
       break;
     case "btname": //戦後名
       ctx.fillStyle = 'rgb(45, 8, 10)'; 
-      ctx.fillRect(16, 46, 220, 25);
+      ctx.fillRect(7, 46, 230, 25);//16, 46, 220, 25
       break; 
     case "btlv": //戦後Lv
       ctx.fillStyle = 'rgb(45, 8, 10)'; 
-      ctx.fillRect(52, 77, 50, 25);
+      ctx.fillRect(43, 77, 50, 25);//52, 77, 50, 25
       break;
   }
   

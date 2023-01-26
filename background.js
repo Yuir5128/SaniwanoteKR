@@ -124,7 +124,7 @@ chrome.alarms.onAlarm.addListener(function(alarm){
     if(alarm.name){
       var timer_cat = alarm.name.charAt(0);
       var timer_num = alarm.name.charAt(1);
-      if(timer_cat=="e"){t_msessage = "차례"+timer_num+t_msessage;}
+      if(timer_cat=="e"){t_msessage = "제"+timer_num+t_msessage;}
       else if(timer_cat=="t"){t_title = "도검제작완료";t_msessage = "단도실"+timer_num+"의 단도가 완료되었습니다";}
       else if(timer_cat=="r"){t_title = "수리완료";t_msessage = "수리실"+timer_num+"의 수리가 완료되었습니다";}
       else if(alarm.name=="u1"){t_title = "내번완료";t_msessage = "내번이 완료되었습니다";}

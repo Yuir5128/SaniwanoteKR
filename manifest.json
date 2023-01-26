@@ -1,29 +1,33 @@
 {
-  "manifest_version": 3, 
-  "name": "사니와수첩", 
-  "version": "1.0.32",
-  "description": "토우러브의 도검 스테이터스 장비・도장 일람등의 정보를 표시하고 음소거와 캡쳐를 간편하게 할 수 있는 툴입니다. 사니와 생활의 동반자로 이용해주시길 바랍니다.",
-  "homepage_url": "https://half-a.net/saniwanote",
-  "icons": {"16":"saniwanote16.png",
-            "48":"saniwanote48.png",
-           "128":"saniwanote128.png"},
-  
-  "devtools_page": "devtools.html",
-  "minimum_chrome_version":"88",
-  
-  "permissions": ["tabs","storage","activeTab","alarms","notifications"],
-  "host_permissions": ["http://pc-play.games.dmm.com/*","https://pc-play.games.dmm.com/*"],
-  "options_page": "settei.html",
-  "background": {"service_worker": "background.js"},
-  "action":{
-    "default_icon": "saniwanote48.png",
-    "default_title": "사니와수첩",
-    "default_popup": "pop.html"
+  "action": {
+     "default_icon": "saniwanote48.png",
+     "default_popup": "pop.html",
+     "default_title": "사니와수첩"
   },
-  "content_scripts":[{
-    "matches": ["http://pc-play.games.dmm.com/play/tohken*","https://pc-play.games.dmm.com/play/tohken*"],
-    "css": ["gamepage.css"],
-    "js": ["jquery.js","tourabupsc.js"], 
-    "run_at": "document_end"
-  }]
+  "background": {
+     "service_worker": "background.js"
+  },
+  "content_scripts": [ {
+     "css": [ "gamepage.css" ],
+     "js": [ "jquery.js", "tourabupsc.js" ],
+     "matches": [ "http://pc-play.games.dmm.com/play/tohken*", "https://pc-play.games.dmm.com/play/tohken*" ],
+     "run_at": "document_end"
+  } ],
+  "description": "도검난무의 도검 스테이터스 장비・도장 일람등의 정보를 표시하고 음소거와 캡쳐를 간편하게 할 수 있는 확장 프로그램입니다. 모쪼록 사니와 생활의 동반자로 이용해주시길.",
+  "devtools_page": "devtools.html",
+  "homepage_url": "https://half-a.net/saniwanote",
+  "host_permissions": [ "http://pc-play.games.dmm.com/*", "https://pc-play.games.dmm.com/*" ],
+  "icons": {
+     "128": "saniwanote128.png",
+     "16": "saniwanote16.png",
+     "48": "saniwanote48.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvyXr51xM6M4Q/CYVpDEg8L62IyflIOdqYEyogS8VN0yzSsXRCiY0Pqsqs+EY9OmV0d0Aoc7xe4iuhlx3ExTsvC4gPMFbAx83wYWm7AdK/YIUuNM4QVg7EFVbCUA4QK/2O1fr5e0+iDK6NQSyLFPOa9C51Cd1v7NwDz6DkBNJJJAqBRdNCWjX2kK4pNgkcnw9143ou8hleZcAyDN0aIiAsc23qnbV9S/rhcUnK3tPKl1LA1oPXL3oDvhffV2gQebsTW8AXI7q8tPO0ZHtq0b86Bxm3p2CYGSIS04VpbeZZxWQMYJgnUi6y4QZJ9mBGcX8k3BPANA5EJKpUMDLp6uUdQIDAQAB",
+  "manifest_version": 3,
+  "minimum_chrome_version": "88",
+  "name": "사니와수첩",
+  "options_page": "settei.html",
+  "permissions": [ "tabs", "storage", "activeTab", "alarms", "notifications" ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.0.35"
 }
