@@ -92,6 +92,7 @@ const equipname={
 "11045":["제5호","ho11045","0","5","5","5","5","5","5"],
 "11046":["제6호","ho11046","0","3","3","3","3","3","3"],
 "11047":["제7호","ho11047","0","3","3","3","3","3","3"],
+"11048":["제8호","ho11048","0","3","3","3","3","3","3"],
 "def":["데이터 없음","def","0","0","0","0","0","0","0"]
 };
 
@@ -164,6 +165,7 @@ var sort = {}; //정렬昇降スイッチ
 var nowsort = 38;
 var comp_frag=0;
 var icoflg=0;
+var accexpflg=0;
 const kentable=$("#kentable");
 const nyusyu_td = document.getElementById('nyusyu_td');
 var tousokekka="";var saniwalv=""; var tousocustom=false;let s_hozonday="";let k_hozonday="";//var alertfrag=false; 출진アラート
